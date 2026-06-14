@@ -1,19 +1,21 @@
-import { Button } from "@/components/ui/button"
+import { Header } from "@/components/layout/header"
+import { Footer } from "@/components/layout/footer"
+import { Hero } from "@/components/features/hero"
+import { TechStack } from "@/components/features/tech-stack"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+    <div className="relative flex min-h-screen flex-col font-sans">
+      <Header />
+      
+      <main className="flex-1 flex flex-col bg-background">
+        <Hero />
+        <TechStack />
+      </main>
+
+      <Footer />
     </div>
   )
 }
+
+
