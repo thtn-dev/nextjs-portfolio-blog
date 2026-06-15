@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/footer"
 import { Hero } from "@/components/features/hero"
 import { TechStack } from "@/components/features/tech-stack"
 import { ProjectsSection } from "@/components/features/projects-section"
+import { ContactSection } from "@/components/features/contact-section"
 import { ForceDark } from "@/components/force-dark"
 
 export default function Page() {
@@ -15,6 +16,7 @@ export default function Page() {
         <Hero />
         <TechStack />
         <ProjectsSection />
+        <ContactSection />
       </main>
 
       <Footer />
