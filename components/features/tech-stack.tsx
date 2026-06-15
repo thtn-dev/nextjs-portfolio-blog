@@ -86,7 +86,7 @@ export function TechStack() {
   const rows = buildInvertedTriangleRows(allTech)
 
   return (
-    <section id="skills" className="w-full py-20 md:py-28 font-sans text-white relative overflow-hidden flex flex-col items-center justify-center bg-[#0a0a0a]">
+    <section id="skills" className="w-full min-h-screen py-20 md:py-28 font-sans text-white relative overflow-hidden flex flex-col items-center justify-center bg-[#0a0a0a]">
 
       {/* Skewed Background Grid */}
       <div className="absolute inset-[-50%] z-0 origin-center rotate-15 scale-150 pointer-events-none">

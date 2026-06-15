@@ -78,7 +78,7 @@ export function ProjectsSection() {
     return (
       <div
         className="group relative flex-none flex flex-col justify-between"
-        style={{ width: `${CARD_WIDTH}px`, height: "650px", padding: "3rem", borderRight: "1px solid rgba(255,255,255,0.1)" }}
+        style={{ width: `${CARD_WIDTH}px`, height: "650px", padding: "3rem", borderRight: "1px solid rgba(255,255,255,0.2)" }}
       >
         <div className={`space-y-12 ${isEven ? "order-1" : "order-2"}`}>
           <div className="flex justify-between items-start">
@@ -112,7 +112,7 @@ export function ProjectsSection() {
     return (
       <section id="projects" className="bg-black text-white py-24 px-6">
         <h2 className="text-4xl font-bold tracking-tight mb-12">
-          My <span className="text-primary">Work</span>
+          My <span className="text-primary">Projects</span>
         </h2>
         <div className="flex flex-col gap-6">
           {projects.map((project, index) => (
@@ -126,9 +126,9 @@ export function ProjectsSection() {
   return (
     <section ref={targetRef} id="projects" className="bg-black text-white relative h-[400vh]">
       <div className="sticky top-0 h-screen flex flex-col overflow-hidden">
-        <div className="pt-24 pb-8 px-6 md:px-12 flex-none">
-          <h2 className="text-5xl font-bold tracking-tight">
-            My <span className="text-primary">Work</span>
+        <div className="pt-26 pb-4 px-6 md:px-12 flex-none text-center">
+          <h2 className="text-4xl font-bold tracking-tight">
+            My <span className="text-primary">Projects</span>
           </h2>
         </div>
 
