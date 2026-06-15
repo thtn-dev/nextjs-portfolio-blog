@@ -38,7 +38,7 @@ export function Hero() {
     <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#050505] px-6 font-sans text-white">
 
       {/* Background glow */}
-      <div className="pointer-events-none absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FF5D43]/5 blur-[120px]" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 h-125 w-125 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FF5D43]/5 blur-[120px]" />
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-18 md:grid-cols-[2fr_3fr]">
         {/* LEFT SIDE */}
@@ -46,10 +46,11 @@ export function Hero() {
           <div className="w-full max-w-md rounded-[32px] bg-white p-8 shadow-[0_0_40px_rgba(255,255,255,0.05)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(255,93,67,0.12)]">
 
             {/* Image */}
-            <div className="group relative mb-8 aspect-[4/5] overflow-hidden rounded-3xl bg-zinc-100">
+            <div className="group relative mb-8 aspect-4/5 overflow-hidden rounded-3xl bg-zinc-100">
               <Image
                 src="/images/profile.jpg"
                 alt="Trung Nam"
+                loading="eager"
                 width={400}
                 height={500}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -91,7 +92,7 @@ export function Hero() {
 
           {/* Heading */}
           <div>
-            <h1 className="bg-gradient-to-r from-white to-zinc-400 bg-clip-text pb-2 text-5xl font-black tracking-tight text-transparent md:text-7xl">
+            <h1 className="bg-linear-to-r from-white to-zinc-400 bg-clip-text pb-2 text-5xl font-black tracking-tight text-transparent md:text-7xl">
               SOFTWARE
             </h1>
 
@@ -131,7 +132,7 @@ export function Hero() {
               <div
                 key={index}
                 className={`${card.bgColor} ${card.textColor} ${card.hoverTransform}
-                  group flex aspect-[3/2] flex-col justify-between rounded-3xl p-7 shadow-lg transition-all duration-300`}
+                  group flex aspect-3/2 flex-col justify-between rounded-3xl p-7 shadow-lg transition-all duration-300`}
               >
 
                 <div className="flex flex-col gap-5">

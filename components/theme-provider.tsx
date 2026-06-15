@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes"
+import { usePathname } from "next/navigation"
 
 function ThemeProvider({
   children,
@@ -36,9 +37,14 @@ function isTypingTarget(target: EventTarget | null) {
 
 function ThemeHotkey() {
   const { resolvedTheme, setTheme } = useTheme()
+  const pathname = usePathname()
 
   React.useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
+      if (pathname === "/") {
+        return
+      }
+
       if (event.defaultPrevented || event.repeat) {
         return
       }
@@ -63,9 +69,10 @@ function ThemeHotkey() {
     return () => {
       window.removeEventListener("keydown", onKeyDown)
     }
-  }, [resolvedTheme, setTheme])
+  }, [resolvedTheme, setTheme, pathname])
 
   return null
 }
 
 export { ThemeProvider }
+
