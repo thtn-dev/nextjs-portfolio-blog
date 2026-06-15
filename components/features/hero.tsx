@@ -18,14 +18,14 @@ const stats = [
 
 const projectCards = [
   {
-    bgColor: "bg-[#FF5D43]",
+    bgColor: "bg-amber-600",
     textColor: "text-white",
     icon: Server,
     title: "SCALABLE API,\nSYSTEM ARCHITECTURE",
     hoverTransform: "hover:-rotate-2 hover:scale-105",
   },
   {
-    bgColor: "bg-[#C6FF4D]",
+    bgColor: "bg-green-600",
     textColor: "text-black",
     icon: Database,
     title: "ASP.NET, POSTGRES,\nREDIS, DOCKER",
@@ -60,8 +60,8 @@ export function Hero() {
 
             {/* Name */}
             <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-4xl font-black tracking-tight text-black">
-                Trung Nam
+              <h2 className="text-3xl font-black tracking-tight text-black">
+                Tang Ho Trung Nam
               </h2>
 
               <div className="flex h-11 w-11 items-center justify-center rounded-full bg-orange-100">

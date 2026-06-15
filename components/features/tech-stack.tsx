@@ -40,7 +40,7 @@ function TechCard({ tech }: { tech: TechItem }) {
 
   return (
     <div
-      className="group relative flex flex-col items-center justify-center w-[95px] h-[95px] sm:w-[110px] sm:h-[110px] border border-white/15 bg-white/5 backdrop-blur-lg rounded-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)] transition-all duration-300 hover:scale-105 hover:bg-white/12 hover:border-white/25 hover:shadow-[0_0_20px_rgba(255,255,255,0.08),inset_0_1px_1px_rgba(255,255,255,0.2)] z-10"
+      className="group relative flex flex-col items-center justify-center w-23.75 h-23.75 sm:w-27.5 sm:h-27.5 border border-white/15 bg-white/5 backdrop-blur-lg rounded-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)] transition-all duration-300 hover:scale-105 hover:bg-white/12 hover:border-white/25 hover:shadow-[0_0_20px_rgba(255,255,255,0.08),inset_0_1px_1px_rgba(255,255,255,0.2)] z-10"
     >
       {/* Icon Container */}
       <div className="relative flex items-center justify-center w-11 h-11 sm:w-13 sm:h-13 overflow-hidden mb-2">
@@ -74,7 +74,7 @@ export function TechStack() {
     <section id="skills" className="w-full py-20 md:py-28 font-sans text-white relative overflow-hidden flex flex-col items-center justify-center bg-[#0a0a0a]">
       
       {/* Skewed Background Grid */}
-      <div className="absolute inset-[-50%] z-0 origin-center rotate-[15deg] scale-150 pointer-events-none">
+      <div className="absolute inset-[-50%] z-0 origin-center rotate-15 scale-150 pointer-events-none">
         <div
           className="w-full h-full opacity-[0.05]"
           style={{
@@ -101,7 +101,7 @@ export function TechStack() {
         </div>
 
         {/* Glow Effect behind cards */}
-        <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[600px] h-[300px] md:h-[400px] bg-purple-600/30 blur-[100px] rounded-full pointer-events-none z-0" />
+        <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-150 h-75 md:h-100 bg-white/30 blur-[100px] rounded-full pointer-events-none z-0" />
 
         {/* Dense Inverted-Triangle Grid matching the photo */}
         <div className="relative flex flex-col gap-4 items-center justify-center max-w-5xl mx-auto z-10">

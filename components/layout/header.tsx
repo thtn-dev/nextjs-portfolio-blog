@@ -21,7 +21,7 @@ export function Header() {
       <header
         className={`mx-auto transition-all duration-500 ease-in-out font-sans ${
           isScrolled
-            ? "max-w-5xl mt-3 rounded-full border border-border bg-background/85 backdrop-blur-md shadow-md px-6"
+            ? "max-w-5xl mt-3 rounded-full border border-white/30 bg-background/95 backdrop-blur-xl shadow-[0_0_20px_hsl(var(--primary)/0.25)] px-6"
             : "w-full border-b border-transparent bg-transparent px-6 md:px-8"
         }`}
       >
@@ -32,7 +32,7 @@ export function Header() {
               href="/"
               className="text-base font-semibold tracking-tight text-foreground transition-opacity hover:opacity-80"
             >
-              YourName
+              TrungNamDev
             </Link>
           </div>
 

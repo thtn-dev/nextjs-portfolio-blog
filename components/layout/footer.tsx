@@ -7,7 +7,7 @@ export function Footer() {
         {/* Name and tagline */}
         <div className="mb-6">
           <h2 className="text-base font-semibold tracking-tight text-zinc-50">
-            YourName
+            TrungNamDev
           </h2>
           <p className="mt-1.5 text-sm text-zinc-400 max-w-xs">
             Designing and building clean, high-performance web experiences.
