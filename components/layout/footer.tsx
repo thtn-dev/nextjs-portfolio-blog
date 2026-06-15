@@ -1,62 +1,60 @@
+import Link from "next/link"
+
 export function Footer() {
-  const currentYear = new Date().getFullYear()
-
   return (
-    <footer className="w-full border-t border-zinc-800 bg-zinc-950 text-zinc-400 py-10 md:py-16 font-sans">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center px-6 text-center md:px-8">
-        {/* Name and tagline */}
-        <div className="mb-6">
-          <h2 className="text-base font-semibold tracking-tight text-zinc-50">
+    <footer className="w-full bg-[#050505] text-zinc-400 py-16 font-sans overflow-hidden border-t border-zinc-900">
+      <div className="mx-auto max-w-7xl px-6 md:px-8">
+        
+        {/* Top Section: Columns */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-20">
+          {/* Column 1: Navigation */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-sky-300 font-medium text-base mb-2">Navigation</h3>
+            <Link href="#about" className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors">About</Link>
+            <Link href="#projects" className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors">Projects</Link>
+            <Link href="#skills" className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors">Skills</Link>
+            <Link href="#contact" className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors">Contact</Link>
+          </div>
+
+          {/* Column 2: Socials */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-sky-300 font-medium text-base mb-2">Socials</h3>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors">LinkedIn</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors">X / Twitter</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors">YouTube</a>
+          </div>
+
+          {/* Column 3: Resources */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-sky-300 font-medium text-base mb-2">Resources</h3>
+            <a href="/pdf/Tang-Ho-Trung-Nam-CV.pdf" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors">Resume / CV</a>
+            <a href="#" className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors">Source Code</a>
+            <a href="#" className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors">Style Guide</a>
+          </div>
+         
+        </div>
+
+        {/* Middle Section: Giant Outline Text */}
+        <div className="w-full flex justify-center mb-16 overflow-hidden">
+          <h1 
+            className="text-[12vw] md:text-[8vw] font-black tracking-tighter uppercase whitespace-nowrap text-transparent opacity-80"
+            style={{ WebkitTextStroke: "1px rgba(255, 255, 255, 0.15)" }}
+          >
             TrungNamDev
-          </h2>
-          <p className="mt-1.5 text-sm text-zinc-400 max-w-xs">
-            Designing and building clean, high-performance web experiences.
-          </p>
+          </h1>
         </div>
 
-        {/* Social Icons */}
-        <div className="flex items-center gap-5 mb-8">
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-zinc-400 hover:text-zinc-50 transition-colors p-1"
-            aria-label="GitHub"
-          >
-            <svg className="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-              <path d="M9 18c-4.51 2-5-2-7-2" />
-            </svg>
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-zinc-400 hover:text-zinc-50 transition-colors p-1"
-            aria-label="LinkedIn"
-          >
-            <svg className="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-              <rect width="4" height="12" x="2" y="9" />
-              <circle cx="4" cy="4" r="2" />
-            </svg>
-          </a>
-        </div>
-
-        {/* Copyright and Info */}
-        <div className="flex flex-col gap-2 text-xs text-zinc-500">
-          <p>© {currentYear} YourName. All rights reserved.</p>
-          <p className="flex items-center justify-center gap-1">
-            Built with{" "}
-            <a
-              href="https://nextjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-zinc-400 hover:text-zinc-50 hover:underline transition-colors"
-            >
-              Next.js
-            </a>
-          </p>
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-600 pt-8 border-t border-zinc-900/50">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-sky-500"></span>
+            All systems operational
+          </div>
+          <div className="flex items-center gap-6">
+            <a href="#" className="hover:text-zinc-400 transition-colors">Privacy policy</a>
+            <a href="#" className="hover:text-zinc-400 transition-colors">Terms of service</a>
+          </div>
         </div>
       </div>
     </footer>
