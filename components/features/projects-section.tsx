@@ -112,7 +112,7 @@ export function ProjectsSection() {
     return (
       <section id="projects" className="bg-black text-white py-24 px-6">
         <h2 className="text-4xl font-bold tracking-tight mb-12">
-          My <span className="text-[#a78bfa]">Work</span>
+          My <span className="text-primary">Work</span>
         </h2>
         <div className="flex flex-col gap-6">
           {projects.map((project, index) => (
@@ -128,7 +128,7 @@ export function ProjectsSection() {
       <div className="sticky top-0 h-screen flex flex-col overflow-hidden">
         <div className="pt-24 pb-8 px-6 md:px-12 flex-none">
           <h2 className="text-5xl font-bold tracking-tight">
-            My <span className="text-[#a78bfa]">Work</span>
+            My <span className="text-primary">Work</span>
           </h2>
         </div>
 
