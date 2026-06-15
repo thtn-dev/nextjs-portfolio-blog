@@ -1,3 +1,4 @@
+import Script from "next/script"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { Hero } from "@/components/features/hero"
@@ -20,6 +21,12 @@ export default function Page() {
       </main>
 
       <Footer />
+
+      <Script id="chatbase-script" strategy="lazyOnload">
+        {`
+          (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="XkebijsNLCFq8r9-uXAlv";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+        `}
+      </Script>
 
       <style dangerouslySetInnerHTML={{ __html: `
         /* Force dark theme variables locally */
@@ -59,6 +66,17 @@ export default function Page() {
         }
         ::-webkit-scrollbar-thumb:hover {
           background: #333333 !important;
+        }
+
+        /* Chatbase Ping Effect */
+        @keyframes chatbase-ping {
+          0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
+          70% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+        }
+        #chatbase-bubble-button {
+          animation: chatbase-ping 2.5s infinite cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+          border-radius: 50% !important;
         }
       ` }} />
     </div>
