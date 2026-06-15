@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu } from "lucide-react"
+import { Menu, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Header() {
@@ -91,15 +91,22 @@ export function Header() {
                 <circle cx="4" cy="4" r="2" />
               </svg>
             </a>
-            <Button variant="outline" className="h-9 px-4 font-medium rounded-full" asChild>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                Resume
+            <Button variant="default" className="h-9 px-4 font-medium rounded-full gap-2" asChild>
+              <a href="/pdf/Tang-Ho-Trung-Nam-CV.pdf" download="Tang-Ho-Trung-Nam-CV.pdf" rel="noopener noreferrer">
+                <Download className="size-4" />
+                Download CV
               </a>
             </Button>
           </div>
 
-          {/* Mobile: Menu Icon Button */}
-          <div className="flex md:hidden">
+          {/* Mobile: Actions */}
+          <div className="flex md:hidden items-center gap-2">
+            <Button variant="default" className="h-8 px-3 text-xs font-medium rounded-full gap-1.5" asChild>
+              <a href="/pdf/Tang-Ho-Trung-Nam-CV.pdf" download="Tang-Ho-Trung-Nam-CV.pdf" rel="noopener noreferrer">
+                <Download className="size-3.5" />
+                CV
+              </a>
+            </Button>
             <Button
               variant="ghost"
               size="icon"
