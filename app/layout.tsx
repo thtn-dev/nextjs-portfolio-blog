@@ -1,12 +1,12 @@
 import { Geist, Geist_Mono, Roboto_Slab, Roboto } from "next/font/google"
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-const robotoHeading = Roboto({subsets:['latin'],variable:'--font-heading'});
+const robotoHeading = Roboto({ subsets: ["latin"], variable: "--font-heading" })
 
-const robotoSlab = Roboto_Slab({subsets:['latin'],variable:'--font-serif'});
+const robotoSlab = Roboto_Slab({ subsets: ["latin"], variable: "--font-serif" })
 
 const fontSans = Geist({
   subsets: ["latin"],
@@ -27,10 +27,18 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontSans.variable, fontMono.variable, "font-serif", robotoSlab.variable, robotoHeading.variable)}
+      className={cn(
+        "antialiased",
+        fontSans.variable,
+        fontMono.variable,
+        "font-serif",
+        robotoSlab.variable,
+        robotoHeading.variable
+      )}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   )
